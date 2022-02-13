@@ -1,0 +1,1 @@
+const consumer={ template: '<h1>HJHJHJ</h1>'}
