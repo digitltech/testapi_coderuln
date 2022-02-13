@@ -28,4 +28,11 @@ export class SharedService {
   deleteConsumer(val:any){
     return this.http.delete(this.APIURL+'/Consumer/'+val)
   }
+
+  getConinfoList():Observable<any[]>{
+    return this.http.get<any>(this.APIURL+'consinformation');//список потребителей со счетчиками
+
+  }
+
+  
 }

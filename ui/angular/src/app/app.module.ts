@@ -10,12 +10,18 @@ import { SharedService } from './shared.service';
 
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ElmetricComponent } from './elmetric/elmetric.component';
+import { ListinformationComponent } from './listinformation/listinformation.component';
+import { ConsinformationComponent } from './consinformation/consinformation.component';
 @NgModule({
   declarations: [
     AppComponent,
     ConsumerComponent,
     ShowConComponent,
-    AddEditConComponent
+    AddEditConComponent,
+    ElmetricComponent,
+    ListinformationComponent,
+    ConsinformationComponent
   ],
   imports: [
     BrowserModule,
