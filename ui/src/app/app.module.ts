@@ -12,7 +12,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ElmetricComponent } from './elmetric/elmetric.component';
 import { ListinformationComponent } from './listinformation/listinformation.component';
-import { ConsinformationComponent } from './consinformation/consinformation.component';
+import { ConsInformationComponent } from './cons-information/cons-information.component';
+import { DetailsComponent } from './cons-information/details/details.component';
+import { EditComponent } from './cons-information/edit/edit.component';
+import { CreateComponent } from './cons-information/create/create.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,10 @@ import { ConsinformationComponent } from './consinformation/consinformation.comp
     AddEditConComponent,
     ElmetricComponent,
     ListinformationComponent,
-    ConsinformationComponent
+    ConsInformationComponent,
+    DetailsComponent,
+    EditComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

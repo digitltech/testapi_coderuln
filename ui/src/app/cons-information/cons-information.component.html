@@ -1,0 +1,91 @@
+<!-- <div class="grid-table">
+    <div class="thead">
+        <div class="tr">
+        <div class="td">#</div>
+        <div class="td">Пользователь</div>
+        <div class="td">Счетчик</div>
+    </div>
+    </div>
+    <div class="tbody">
+        <form class="tr" *ngFor="let fg of cons_informationForm.controls;">
+            <div class="td">
+                <input class="form-control" formControlName="id">
+            </div>
+        <div class="td">
+            <input class="form-control" formControlName="ConsumerId">
+        </div>
+        <div class="td">
+            <input class="form-control" formControlName="ElMetersId">
+        </div>
+    </form>
+    </div>
+</div> -->
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Потребитель</th>
+            <th scope="col">Адрес</th>
+            <th scope="col">Телнфон</th>
+            <th scope="col">Список счетчиков</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataitem of ConsList">
+            <th>{{dataitem.Name}}</th>
+            <td>{{dataitem.AdresFull}}</td>
+            <td>{{dataitem.Phone}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="edit(dataitem)">
+                    Список счетчиков
+                  </button>
+            </td>
+<!--          
+            <td colspan="4">
+                <table class="table mb-0">
+                    <tr >
+                        <th scope="col">Номер счетчика</th>
+                        <th scope="col">Дата ввода </th>
+                        <th scope="col">Дата поверки</th>
+                        <td><button>Добавить</button></td>
+                        
+                    </tr>
+               
+                     <tr *ngFor="let list of ConsInformationList.get(dataitem.Id)">
+                        <td>{{list.ElMeters.Number}}</td>
+                        <td>{{list.ElMeters.DateOfWork}} </td>
+                        <td>{{list.ElMeters.CheckDate}}</td>
+                        <td><button >Edit</button>
+                            <button >dell</button></td>
+                        
+                    </tr> 
+                </table>
+            </td> -->
+        </tr>
+    </tbody>
+    
+</table>
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-edit>
+              
+          </app-edit>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
